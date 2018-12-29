@@ -50,4 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', handleFormSubmit);
 
+
+  // Add delete-all button (add button to HTML):
+  const deleteButton = document.querySelector('#delete-all-button');
+
+  const handleDeleteButton = function(event){
+    const movieList = document.querySelector('#movie-list');
+    movieList.innerHTML = '';
+  }
+
+  deleteButton.addEventListener('click', handleDeleteButton);
 });
