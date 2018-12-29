@@ -24,7 +24,22 @@
 
       <div class="form-item">
         <label for="genre">Genre</label>
-        <input type="text" id="genre">
+        <select id="genre">
+          <option value="" disabled selected></option>
+          <option value="Action">Action</option>
+          <option value="Drama">Drama</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Thriller">Thriller</option>
+        </select>
+      </div>
+
+      <div class="form-item">
+        <label for="recommend">Would you recommend this movie?</label>
+          <label for="Yes">Yes</label>
+          <input type="radio" name="recommend" id="Yes" value="Yes" checked="checked">
+          <label for="No">No</label>
+          <input type="radio" name="recommend" id="No" value="No">
       </div>
 
     </div>

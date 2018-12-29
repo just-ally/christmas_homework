@@ -14,12 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //1.
   const handleFormSubmit = function(event){
+    console.log(event);
     event.preventDefault();
+
 
     //2.
     const title = event.target.title.value;
     const director = event.target.director.value;
     const genre = event.target.genre.value;
+    // const recommend = event.target.recommend.value;
+
+    const recommend = document.querySelector('#new-form')['recommend'].value
 
     //3.
     const movieList = document.querySelector('#movie-list');
@@ -31,16 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const titlePara = document.createElement('p');
     const directorPara = document.createElement('p');
     const genrePara = document.createElement('p');
+    const recommendPara = document.createElement('p');
 
     //6.
     titlePara.textContent = title;
     directorPara.textContent = director;
     genrePara.textContent = genre;
+    recommendPara.textContent = recommend;
 
     //7.
     movieDetails.appendChild(titlePara);
     movieDetails.appendChild(directorPara);
     movieDetails.appendChild(genrePara);
+    movieDetails.appendChild(recommendPara);
 
     movieList.appendChild(movieDetails);
 
