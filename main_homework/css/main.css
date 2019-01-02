@@ -1,0 +1,33 @@
+body {
+  font-family: Futura;
+  background-color: #CAE4DB;
+  color: #00303F;
+}
+
+#form-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item {
+  padding: 10px;
+}
+
+button, input[type="submit"] {
+  background-color: #DCAE1D;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+#movie-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-details {
+  margin: 5px 15px;
+  padding: 5px 10px;
+  border: 1px solid #00303F;
+  background-color: #DCAE1D;
+}

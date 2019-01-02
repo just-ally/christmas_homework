@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //4.
     const movieDetails = document.createElement('div');
+    movieDetails.classList.add('movie-details');
 
     //5.
     const titlePara = document.createElement('p');
@@ -39,10 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const recommendPara = document.createElement('p');
 
     //6.
-    titlePara.textContent = title;
-    directorPara.textContent = director;
-    genrePara.textContent = genre;
-    recommendPara.textContent = recommend;
+    titlePara.textContent = "Movie: " + title;
+    directorPara.textContent = "Director: " + director;
+    genrePara.textContent = "Genre: " + genre;
+    recommendPara.textContent = "Recommended: " + recommend;
 
     //7.
     movieDetails.appendChild(titlePara);
