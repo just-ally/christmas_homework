@@ -12,11 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.querySelector('#new-form');
 
+  const addElement = function(type){
+    return document.createElement(type);
+  }
+
+  const movieList = document.querySelector('#movie-list');
+
   //1.
   const handleFormSubmit = function(event){
     console.log(event);
     event.preventDefault();
-
 
     //2.
     const title = event.target.title.value;
@@ -27,17 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const recommend = document.querySelector('#new-form')['recommend'].value
 
     //3.
-    const movieList = document.querySelector('#movie-list');
+    // refactored - movie list declaration moved out of handler function
 
     //4.
-    const movieDetails = document.createElement('div');
+    const movieDetails = addElement('div');
     movieDetails.classList.add('movie-details');
 
     //5.
-    const titlePara = document.createElement('p');
-    const directorPara = document.createElement('p');
-    const genrePara = document.createElement('p');
-    const recommendPara = document.createElement('p');
+    const titlePara = addElement('p');
+    const directorPara = addElement('p');
+    const genrePara = addElement('p');
+    const recommendPara = addElement('p');
 
     //6.
     titlePara.textContent = "Movie: " + title;
@@ -64,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const deleteButton = document.querySelector('#delete-all-button');
 
   const handleDeleteButton = function(event){
-    const movieList = document.querySelector('#movie-list');
+    // refactored - movie list declaration moved out of handler function
     movieList.innerHTML = '';
   }
 
