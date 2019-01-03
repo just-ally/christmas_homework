@@ -14,4 +14,19 @@ describe('Record', function(){
     assert.strictEqual(actual, 'Errors')
   });
 
+  it('should have a title', function(){
+    const actual = record.title;
+    assert.strictEqual(actual, 'Have Some Faith in Magic')
+  });
+
+  it('should have a genre', function(){
+    const actual = record.genre;
+    assert.strictEqual(actual, 'Electronica')
+  });
+
+  it('should have a price', function(){
+    const actual = record.price;
+    assert.strictEqual(actual, 8)
+  });
+
 })
