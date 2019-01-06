@@ -29,4 +29,9 @@ describe('Record', function(){
     assert.strictEqual(actual, 8)
   });
 
+  it('should be print out the record\'s properties as a string', function(){
+    const actual = record.printProperties();
+    assert.deepStrictEqual(actual, "Errors, Have Some Faith in Magic, Electronica, 8")
+  });
+
 })
